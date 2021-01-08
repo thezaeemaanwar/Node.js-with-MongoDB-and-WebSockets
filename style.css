@@ -1,0 +1,80 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: linear-gradient(to right, rgb(119, 116, 127), rgb(248, 56, 84));
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  box-shadow: rgba(53, 52, 52, 0.3) 3px 5px 5px 4px;
+}
+form label,
+input {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+form label {
+  font: 600 2em "Raleway", sans-serif;
+}
+.button {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  box-shadow: rgba(53, 52, 52, 0.3) 2px 3px 3px 2px;
+  font-size: 1rem;
+}
+.inputField {
+  border: oldlace 2px solid;
+  background-color: transparent;
+  box-shadow: rgba(53, 52, 52, 0.3) 2px 3px 3px 2px;
+}
+.inputField:focus {
+  width: 70%;
+  outline: none;
+}
+.button {
+  width: 63%;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+  transform: translateY(2px);
+}
+::placeholder {
+  color: whitesmoke;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: whitesmoke;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: whitesmoke;
+}
+.tableContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+table {
+    width: 40%;
+    margin: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: rgba(53, 52, 52, 0.3) 3px 5px 5px 4px;
+}
