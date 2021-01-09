@@ -1,5 +1,3 @@
-
-
 var mongo = require("mongodb");
 var mongoClient = mongo.MongoClient;
 
