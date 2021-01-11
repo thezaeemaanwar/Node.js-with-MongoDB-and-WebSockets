@@ -15,10 +15,13 @@ wsServer.on("request", (request) => {
   const connection = request.accept(null, request.origin);
   connection.on("message", (message) => {
     stringData = JSON.stringify(data);
-
     console.log("recieved Message : " + message.utf8Data);
     if (message.utf8Data === "requesting data") {
       connection.send(stringData);
+    }
+    else {
+      authenticateUser(JSON.parse(message.utf8Data));
+      
     }
   });
   connection.on("close", (reasonCode, description) => {

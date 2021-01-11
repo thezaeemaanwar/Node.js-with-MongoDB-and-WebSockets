@@ -1,4 +1,12 @@
-[
+{"Users":[
+  {"username":"Sherlockholmes", "password":"iamsherlocked"},
+  {"username":"Brucewayne", "password":"iambatman"},
+  {"username":"clarkkent", "password":"iamsuperman"},
+  {"username":"peterparker", "password":"iamspiderman"},
+  {"username":"jackfrost", "password":"iamguardian"},
+  {"username":"dianaprince", "password":"iamwonderwoman"}
+],
+  "TableData":[
   { "First Name": "Sherlock", "Last Name":"Holmes","Age": 24, "Profession": "Detective", "Family Members": 5 },
   { "First Name": "Bruce", "Last Name":"Wayne","Age": 35, "Profession": "Bussiness", "Family Members": 1 },
   { "First Name": "Clark", "Last Name":"Kent","Age": 27, "Profession": "Reporter", "Family Members": 3 },
@@ -6,3 +14,4 @@
   { "First Name": "Jack", "Last Name":"Frost","Age": 17, "Profession": "Guardian", "Family Members": 4 },
   { "First Name": "Diana", "Last Name":"Prince","Age": 27, "Profession": "Private", "Family Members": 1 }
 ]
+}

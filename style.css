@@ -65,21 +65,34 @@ form label {
   /* Microsoft Edge */
   color: whitesmoke;
 }
-.tableContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.tableContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 table {
-    width: 40%;
-    margin: 20px;
+  width: 40%;
+  margin: 20px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 20px;
   box-shadow: rgba(53, 52, 52, 0.3) 3px 5px 5px 4px;
 }
 table tr {
-  box-shadow: rgba(53, 52, 52, 0.3) 3px 5px 5px 4px;
-  padding: 5px;
-  margin: 10px;
+  box-shadow: rgba(53, 52, 52, 0.3) 1px 1px 2px 1px;
+}
+table tr td {
+  padding: 10px;
+  color: black;
+}
+thead tr{
+  align-content: center;
+  box-shadow: none;
+}
+table thead tr td {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: aliceblue;
+  padding: 20px;
+  font-size: 2rem;
 }
