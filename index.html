@@ -8,8 +8,8 @@
     <title>Users Table</title>
 </head>
 <body>
+    <p id = "p" style="visibility: hidden;"></p>
     <div class="tableContainer">
-        <p id = "p"></p>
         <table id = "table1"><thead><tr><td>Table 01</td></tr></thead></table>
         <table id = "table2"><thead><tr><td>Table 02</td></tr></thead></table>
         <table id = "table3"><thead><tr><td>Table 03</td></tr></thead></table>
@@ -26,9 +26,11 @@
         <input id = "age" type="text"/>
         <label>Profession </label>  
         <input id = "pro" type="text"/>
+        <label>Family Members </label>  
+        <input id = "fam" type="text"/>
         <div id = "buttons">
             <input type="submit" id = "addBtn" value = "Add"/>
-            <input type="submit" id = "cancelBtn" value = "Cancel"/>
+            <input type="button" id = "cancelBtn" value = "Cancel"/>
         </div>
     </form>
     <script src = "client.js"></script>

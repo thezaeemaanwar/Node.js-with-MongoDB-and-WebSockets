@@ -17,16 +17,17 @@ wsServer.on("request", (request) => {
   const connection = request.accept(null, request.origin);
   connection.on("message", (message) => {
     // if client is requesting data, send the data
-    if (message.utf8Data === "requesting data") DB(connection);
-    else {
-      console.log("else");
+    if (message.utf8Data === "requesting data") {
+      DB(connection, "retrieve", {});
+    } else {
+      DB(connection, "else", JSON.parse(message.utf8Data));
     }
   });
   connection.on("close", (reasonCode, description) => {
-    console.log("Connection is disconnected by client");
+    //console.log("Connection is disconnected by client");
   });
 });
-async function DB(connection) {
+async function DB(connection, act, obj) {
   const uri =
     "mongodb+srv://nodejs-mongodb:nodejs-mongodb@cluster0.ulgkf.mongodb.net/usersDB?retryWrites=true&w=majority";
 
@@ -35,11 +36,12 @@ async function DB(connection) {
   try {
     // Connect to the MongoDB cluster
     await client.connect();
-    await retrieveData(client);
+    if (act === "retrieve") await retrieveData(client);
+    else editData(client, obj);
   } catch (e) {
     console.error(e);
   } finally {
-    await client.close();
+    //await client.close();
   }
   connection.send(JSON.stringify(Users));
 }
@@ -48,5 +50,16 @@ async function retrieveData(client) {
   const db = client.db("usersDB");
   const collection = db.collection("TableData");
   var data = await collection.find({}).toArray();
-  Users = { Users: data[0].Users, TableData: data[0].TableData };
+  Users = data;
+}
+
+async function editData(client, obj) {
+  const db = client.db("usersDB");
+  const collection = db.collection("TableData");
+  console.log("inside edit");
+  var query = { username: obj.username };
+  console.log(obj);
+  console.log("query:" + obj.username);
+  var res = await collection.replaceOne(query, obj);
+  console.log(res.modifiedCount + " " + res.matchedCount);
 }
