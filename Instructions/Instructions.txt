@@ -1,0 +1,9 @@
+	INSTRUCTIONS
+-------------------------
+
+1. Start the server from terminal
+   using command:
+	>	node server
+	
+2. Start the login.html file
+3. usernames and passwords are in data.json file.
