@@ -1,9 +1,15 @@
-	INSTRUCTIONS
--------------------------
-
-1. Start the server from terminal
-   using command:
-	>	node server
-	
-2. Start the login.html file
-3. usernames and passwords are in data.json file.
+<div className="questionCard">
+            <div id="title">{question.title}</div>
+            <div className="option-div">
+              {question.options.map((option, ind) => {
+                <div className="option" key={ind}>
+                  {question.optionType === "oneOp" ? (
+                    <input className="radio-in" type="radio" name="oneOp" />
+                  ) : (
+                    <input className="check-in" type="checkbox" name="mulOp" />
+                  )}
+                  <input className="op" type="text" value={option.text} />
+                </div>;
+              })}
+            </div>
+          </div>
